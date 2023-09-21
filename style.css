@@ -8,12 +8,12 @@ body{
 video{
     position: relative;
     object-fit:fill;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     z-index: 1;
     margin-bottom: 0;
     height: 100vh;
-    min-width: 100%;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .name_intro{
@@ -21,19 +21,22 @@ video{
     color:aliceblue;
     z-index: 2;
     top: 0;
-    height: 100%;
-    width: 100%;
-    font-size: 6vmin;
+    height: 100vh;
+    width: 100vw;
+    font-size: 4vmax;
     text-align: center;
+    vertical-align: middle;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: radial-gradient(rgba(255, 255, 255, 0.089), transparent)
+    background: radial-gradient(rgba(255, 255, 255, 0.089), transparent);
+    max-width: 100%;
 }
 
 .menu{
         z-index: 3;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 100vw;
+        max-width: 100%;
         padding: 2vmin;
         background: rgba(1, 0, 5, 0.904);
 }
@@ -45,114 +48,65 @@ video{
     border: none;
     background: none;
     color: rgba(255, 255, 255, 0.856);
-    transition-duration: 0.4s;
+    transition-duration: 1s;
     font-weight: lighter;
+    padding: 1.5vmin;
 }
 
 .menuB:hover{
     color: white;
     background: gray;
-    padding: 1.5vmin;
-    border-radius: 1.5vmin;
+    border-radius: 2vw;
+
 }
 
 .home{
-    margin-left: 3vmin;
+    left: 5vw;
 }
+/* 
 .about{
-    margin-left: 147vmin;
+    margin-left: 35vw;
 }
+
 .projects{
-    margin-left: 7vmin;
+    margin-left: 7vw;
 }
 .contact{
-    margin-left: 7vmin;
-}
+    margin-left: 7vw;
+    margin-right: 5vw;
+} */
 
 
 
 .quote{
-    position: absolute;
+    position: relative;
     background-color: #000000;
-    z-index: 2;
     min-width: 100%;
-    top: calc(100vh - 17px);
-    height: 15vh;
+    padding: 0;
+    margin-top: 0;
     color: rgb(255, 255, 255);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 250%;
+    font-size: 5.5vh;
+    padding-top: 4vh;
     font-weight: bold;
     text-align: center;
-    line-height:13vh;
+    line-height:7vh;
+    word-wrap: break-word;
+    padding-bottom: 4vh;
+
 }
 
-/* .intro{
-    z-index: 2;
-    top: 113.4vh;
-    position: absolute;
-    object-fit:fill;
-    min-height: 100vh;
-    width: 50%;
-    margin-bottom: 0;
-    background-color: #101113;
-    left: 50%;
-} */
-
-
-
-
-
-/* .img{
-    width: 50%;
-    height: 99vh;
-    object-fit:cover;
-} */
-
-.contact1{
-    background-color: aliceblue;
-    position: absolute;
-    height: 50vh;
-    width: 100%;
-    z-index: 3;
-    min-height: 50vh;
-    top: 212.4vh;
-}
-
-/* .intro{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 0;
-    background-color: #101113;
-} */
-
-/* .text1{
-    color: rgba(255, 255, 255, 0.667);
-    text-align: center;
-    width: 50vw;
-    height: 100vh;
-    font-size: 1.5em;
-}
-
-.moonimg{
-    top: 113.4vh;
-    position: absolute;
-    object-fit:cover;
-    min-height: 100%;;
-    width: 100%;
-    margin-bottom: 0;
-    background-color: #101113;
-} */
 
 .gridIntro{
-    display: grid;
-    top: ;
-    height: 100vh;
-    width: 100%;
-    padding: 10vh;
+    display: inline-flex;
+    height: 80vh;
+    width: 100vw;
     background-color: #101113;
-    z-index: 2;
     grid-template-columns: auto auto;
     align-items: center;
+    position: absolute;
+    align-self: center;
+    vertical-align: middle;
 }
 
 .gridItem{
@@ -164,8 +118,9 @@ video{
     object-fit: cover;
     vertical-align: middle;
     display: table-cell;
-    height: 80vh;
+    height:60vh;
     width: 40vw;
+    background-color: antiquewhite;
 
 }
 
