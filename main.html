@@ -8,32 +8,79 @@
     </head>
 
     <body>
-        <video src="Background1.mp4" muted autoplay loop></video>
-
-        <div class="name_intro">
-            <h3 style="font-weight: normal; line-height: 0;">Hello World</h3>
-            <h1 style="font-weight: normal; line-height: 0.5;">I am Girish</h1>
-        </div>
+        <video src="video1.mp4" muted autoplay loop></video>
 
         <div class="menu">
-            <button class="menuB home" href="main.html">Home</button>
-            <button class="menuB about" href="about.html">About</button>
-            <button class="menuB projects" href="projects.html">Projects</button>
-            <button class="menuB contact" href="contact.html">Contact</button>
-
+            <a href="#home"><button class="menuB home">Home</button></a>
+            <a href="#about"><button class="menuB about">About</button></a>
+            <a href="projects.html"><button class="menuB projects" href="projects.html">Projects</button></a>
+            <a href="#contact"><button class="menuB contact">Contact</button></a>
         </div>
 
-        <div class="quote">"Don't find yourself, create yourself"</div>
-
-        <div class="gridIntro">
-            <div class="gridItem"><p>hello</p></div>
-            <div class="gridItem image"></div>
+        <div id="home">
+            <h5 style="font-weight: normal; line-height: 0;">Hello World</h5>
+            <h1 style="font-weight: normal; line-height: 0;">I am Girish</h1>
         </div>
 
-        <div class="contact1">
-            
-            <button href="mailto:girishm1603@gmail.com"><img src="gmail.png"></button>
+        <div id="about">
+            <h1 class="quote">"Don't find yourself, create yourself"</h1>
+
+            <p class="aboutPara">Hi, I'm Girish. I'm an ambitious, intelligent and passionate high-school student. 
+                At the time of this website's design, I was in Grade 11. I love computer science and problem solving. 
+                I'm a quick and critical thinker and <span id="dots">...</span><span id="more"> grasp new concepts quickly. 
+                This is my portfolio website where I hope to post my CS projects and achievements. 
+                As my knowledge with Web-Development deepens, I plan to connect this website to a discord bot, through which, 
+                I will be able to post my projects effortlessly.</span><button onclick="readMore()" id="rmBtn">Read more</button></p>
+                
         </div>
+
+        <div id="contact">
+            <a class="git" href="https://github.com/girish316"><img src=""></a>
+            <a class="mail" href="mailto:gmunu1@ocdsb.ca"></a>
+        </div>
+
+        <div class="popup">
+            <button id="close">&times;</button>
+            <p>
+                For the best viewing experience, view this website in landscape mode
+            </p>
+        </div>
+
     </body>
+
+<script>
+    window.addEventListener("load", function(){
+        setTimeout(
+            function open(event){
+                document.querySelector(".popup").style.display = "block";
+            },
+            2000 
+        )
+    });
+
+
+    document.querySelector("#close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+    });
+
+    function readMore(){
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("rmBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+        document.getElementById('about').scrollIntoView();
+
+    }
+
+</script>
 
 </html>
